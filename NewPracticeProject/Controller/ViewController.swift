@@ -24,15 +24,10 @@ class ViewController: UIViewController {
 
     @IBAction func firstMethod(_ sender: Any)
     {
-        if (firstButton.backgroundColor == .orange)
-        {
-            firstButton.backgroundColor = .black
-        }
-        else
-        {
-            firstButton.backgroundColor = .orange
-        }
+        
+        firstButton.backgroundColor = createRandomColor()
         view.backgroundColor = createRandomColor()
+        firstButton.setTitleColor(createRandomColor(), for: .normal)
     }
     
     private func createRandomColor () -> UIColor
