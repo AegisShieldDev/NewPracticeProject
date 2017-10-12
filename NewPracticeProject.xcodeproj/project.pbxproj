@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93825ECD1F8FF55900B79E84 /* SecondScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93825ECC1F8FF55900B79E84 /* SecondScreenController.swift */; };
+		93825ED11F8FF9B200B79E84 /* ColorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93825ED01F8FF9B200B79E84 /* ColorTools.swift */; };
 		93EF92021F8D3BF20012BF10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF92011F8D3BF20012BF10 /* AppDelegate.swift */; };
 		93EF92041F8D3BF20012BF10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF92031F8D3BF20012BF10 /* ViewController.swift */; };
 		93EF92071F8D3BF20012BF10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EF92051F8D3BF20012BF10 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		93825ECC1F8FF55900B79E84 /* SecondScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenController.swift; sourceTree = "<group>"; };
+		93825ED01F8FF9B200B79E84 /* ColorTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTools.swift; sourceTree = "<group>"; };
 		93EF91FE1F8D3BF20012BF10 /* NewPracticeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewPracticeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EF92011F8D3BF20012BF10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93EF92031F8D3BF20012BF10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93825ECF1F8FF99900B79E84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93825ED01F8FF9B200B79E84 /* ColorTools.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		93EF91F51F8D3BF20012BF10 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		93EF92001F8D3BF20012BF10 /* NewPracticeProject */ = {
 			isa = PBXGroup;
 			children = (
+				93825ECF1F8FF99900B79E84 /* Model */,
 				93EF92161F8D4E290012BF10 /* View */,
 				93EF92131F8D3C830012BF10 /* LaunchScreen.storyboard */,
 				93EF92151F8D4DEB0012BF10 /* Controller */,
@@ -166,6 +177,7 @@
 				93EF92041F8D3BF20012BF10 /* ViewController.swift in Sources */,
 				93EF92021F8D3BF20012BF10 /* AppDelegate.swift in Sources */,
 				93825ECD1F8FF55900B79E84 /* SecondScreenController.swift in Sources */,
+				93825ED11F8FF9B200B79E84 /* ColorTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
