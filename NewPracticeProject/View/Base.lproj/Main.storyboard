@@ -33,6 +33,14 @@
                                     <action selector="slideMethod:" destination="BYZ-38-t0r" eventType="valueChanged" id="rob-6l-IlD"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K96-5n-ctH">
+                                <rect key="frame" x="155" y="558" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Screens"/>
+                                <connections>
+                                    <segue destination="ubp-Vt-dg3" kind="show" id="zzC-dl-9q2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,20 +54,30 @@
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Second Screen Controller-->
         <scene sceneID="0GF-1J-oN1">
             <objects>
-                <viewController id="ubp-Vt-dg3" sceneMemberID="viewController">
+                <viewController id="ubp-Vt-dg3" customClass="SecondScreenController" customModule="NewPracticeProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ea1-xr-p5Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcX-Cd-flh">
+                                <rect key="frame" x="126" y="422" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Screens"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="PPH-LL-8Qd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="vfy-Nk-ZiT"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inr-Zg-usi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="38"/>
+            <point key="canvasLocation" x="834" y="38"/>
         </scene>
     </scenes>
 </document>
