@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let redValue     :CGFloat = CGFloat (0)
+    let greenValue   :CGFloat = CGFloat (0)
+    let blueValue    :CGFloat = CGFloat (0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,14 @@ class ViewController: UIViewController {
         firstButton.setTitleColor(createRandomColor(), for: .normal)
     }
     
+    @IBOutlet weak var slideRainbow: UISlider!
+    
+    @IBAction func slideMethod(_ sender: Any)
+    {
+        view.backgroundColor = rainbowSlide(val: slideRainbow.value)
+    }
+    
+    
     private func createRandomColor () -> UIColor
     {
         let newColor    :UIColor
@@ -40,6 +52,30 @@ class ViewController: UIViewController {
         newColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat(1.0))
         
         return newColor
+    }
+    
+    private func rainbowSlide (val: Float) -> UIColor
+    {
+        let rainbowColor :UIColor
+        
+        if (val < 33)
+        {
+            let redValue = redValue + 7.5
+        }
+        if (val > 33 && val < 66)
+        {
+            let greenValue = greenValue + 7.5
+            let redValue = redValue - 7.5
+        }
+        if (val > 66)
+        {
+            let blueValue = blueValue + 7.5
+            let greenValue = greenValue + 7.5
+        }
+        
+        rainbowColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat(1.0))
+        
+        return rainbowColor
     }
 
 
