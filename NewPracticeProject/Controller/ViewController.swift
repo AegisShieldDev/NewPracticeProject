@@ -9,10 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let redValue     :CGFloat = CGFloat (0)
-    let greenValue   :CGFloat = CGFloat (0)
-    let blueValue    :CGFloat = CGFloat (0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,20 +54,9 @@ class ViewController: UIViewController {
     {
         let rainbowColor :UIColor
         
-        if (val < 33)
-        {
-            let redValue = redValue + 7.5
-        }
-        if (val > 33 && val < 66)
-        {
-            let greenValue = greenValue + 7.5
-            let redValue = redValue - 7.5
-        }
-        if (val > 66)
-        {
-            let blueValue = blueValue + 7.5
-            let greenValue = greenValue + 7.5
-        }
+        let redValue     :CGFloat = CGFloat (Double (arc4random_uniform(256)) / 255.00)
+        let greenValue   :CGFloat = CGFloat (Double (arc4random_uniform(256)) / 255.00)
+        let blueValue    :CGFloat = CGFloat (Double (arc4random_uniform(256)) / 255.00)
         
         rainbowColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat(1.0))
         
