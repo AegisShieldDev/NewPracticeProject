@@ -67,7 +67,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Screens"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="PPH-LL-8Qd"/>
+                                    <segue destination="ItT-eZ-lXG" kind="show" id="efC-Zm-OQ7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVc-C4-fAI">
+                                <rect key="frame" x="148" y="487" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="first Screen"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="VAA-dS-jcU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,5 +87,33 @@
             </objects>
             <point key="canvasLocation" x="834" y="38"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6t9-bE-xDr">
+            <objects>
+                <viewController id="ItT-eZ-lXG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dUc-Gu-k6O" customClass="ThirdScreenController">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fti-9R-7hb">
+                                <rect key="frame" x="116" y="427" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Screens"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="hU9-bz-4wu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="K8k-Vy-qhq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mv9-IB-drT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="38"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hU9-bz-4wu"/>
+    </inferredMetricsTieBreakers>
 </document>
