@@ -11,6 +11,7 @@ import UIKit
 public class SecondScreenController : UIViewController
 {
     private lazy var color : ColorTools = ColorTools()
+    @IBOutlet weak var changeScreensOutlet: UIButton!
     
     public override func viewDidLoad()
     {  

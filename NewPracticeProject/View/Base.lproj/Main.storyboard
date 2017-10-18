@@ -82,16 +82,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="vfy-Nk-ZiT"/>
                     </view>
+                    <connections>
+                        <outlet property="changeScreensOutlet" destination="rcX-Cd-flh" id="JGi-6e-nBZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inr-Zg-usi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="834" y="38"/>
         </scene>
-        <!--View Controller-->
+        <!--Third Screen Controller-->
         <scene sceneID="6t9-bE-xDr">
             <objects>
-                <viewController id="ItT-eZ-lXG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dUc-Gu-k6O" customClass="ThirdScreenController">
+                <viewController id="ItT-eZ-lXG" customClass="ThirdScreenController" customModule="NewPracticeProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dUc-Gu-k6O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -104,46 +107,46 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv3-Jr-l3o">
-                                <rect key="frame" x="148" y="455" width="78" height="30"/>
+                                <rect key="frame" x="170" y="455" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button Two"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="ButtonTwoAction:" destination="dUc-Gu-k6O" eventType="touchUpInside" id="nDU-2y-Ejj"/>
+                                    <action selector="ButtonTwoAction:" destination="ItT-eZ-lXG" eventType="touchUpInside" id="axj-nd-AcW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-xE-4FK">
-                                <rect key="frame" x="149" y="417" width="76" height="30"/>
+                                <rect key="frame" x="141" y="417" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button one"/>
+                                <state key="normal" title="Image Button"/>
                                 <connections>
-                                    <action selector="ButtonOneAction:" destination="dUc-Gu-k6O" eventType="touchUpInside" id="9yc-dj-XAL"/>
+                                    <action selector="ButtonOneAction:" destination="ItT-eZ-lXG" eventType="touchUpInside" id="jAP-ap-MTO"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lu0-zQ-Cz6">
-                                <rect key="frame" x="67" y="168" width="240" height="128"/>
+                                <rect key="frame" x="67" y="39" width="240" height="333"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="i06-on-gfy">
-                                <rect key="frame" x="128" y="501" width="118" height="30"/>
+                                <rect key="frame" x="36" y="502" width="302" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="SliderAction:" destination="dUc-Gu-k6O" eventType="valueChanged" id="Sed-oO-FNK"/>
+                                    <action selector="SliderAction:" destination="ItT-eZ-lXG" eventType="valueChanged" id="sV8-Om-3Ja"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="K8k-Vy-qhq"/>
-                        <connections>
-                            <outlet property="buttonOneOutput" destination="LBd-xE-4FK" id="yYL-V3-6aV"/>
-                            <outlet property="buttonTwoOutput" destination="Cv3-Jr-l3o" id="y8X-3m-WgQ"/>
-                            <outlet property="imageOutput" destination="lu0-zQ-Cz6" id="JVn-hg-YQ8"/>
-                            <outlet property="sliderOutput" destination="i06-on-gfy" id="1O0-gB-WQP"/>
-                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="buttonOneOutput" destination="LBd-xE-4FK" id="WHq-Z3-ogx"/>
+                        <outlet property="buttonTwoOutput" destination="Cv3-Jr-l3o" id="zZx-08-fId"/>
+                        <outlet property="imageOutput" destination="lu0-zQ-Cz6" id="FfC-1a-Xkt"/>
+                        <outlet property="sliderOutput" destination="i06-on-gfy" id="DMu-Gz-Peb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mv9-IB-drT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="38"/>
+            <point key="canvasLocation" x="1604" y="37.331334332833585"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
