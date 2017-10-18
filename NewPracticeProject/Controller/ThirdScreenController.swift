@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 public class ThirdScreenController : UIViewController
 {
@@ -15,10 +16,17 @@ public class ThirdScreenController : UIViewController
     @IBOutlet weak var buttonTwoOutput: UIButton!
     @IBOutlet weak var sliderOutput:    UISlider!
     @IBOutlet weak var imageOutput:     UIImageView!
+    @IBOutlet weak var playPauseOutput: UIButton!
     
     private lazy var color : ColorTools = ColorTools()
     private var imageCounter : Int = 0
+    private var soundPlayer : AVAudioPlayer?
     
+    public override func viewDidLoad()
+    {
+        view.backgroundColor = color.createRandomColor()
+        loadAudioFile()
+    }
     @IBAction func ButtonOneAction(_ sender: Any)
     {
         //Image Button
@@ -70,4 +78,22 @@ public class ThirdScreenController : UIViewController
         
         imageCounter += 1
     }
+    private func loadAudioFile() -> Void
+    {
+        if let soundURL = NSDataAsset(name: "Quinn")
+        {
+            do
+            {
+                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setActive(true)
+                
+                try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
+                sliderOutput.maximumValue = Float ((soundPlayer?.duration)!)
+                //Timer.scheduledTimer(withTimeInterval: TimeInterval: 0.2, target: self, selector:
+                    //(#selector(self.updateSlider)), userInfo: nil, repeats: true)
+                
+            }
+        }
+    }
+
 }

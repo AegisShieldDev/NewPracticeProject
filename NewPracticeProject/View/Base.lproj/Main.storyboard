@@ -122,10 +122,6 @@
                                     <action selector="ButtonOneAction:" destination="ItT-eZ-lXG" eventType="touchUpInside" id="jAP-ap-MTO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ImageThree" translatesAutoresizingMaskIntoConstraints="NO" id="lu0-zQ-Cz6">
-                                <rect key="frame" x="67" y="39" width="240" height="333"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="i06-on-gfy">
                                 <rect key="frame" x="36" y="502" width="302" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -133,6 +129,15 @@
                                     <action selector="SliderAction:" destination="ItT-eZ-lXG" eventType="valueChanged" id="sV8-Om-3Ja"/>
                                 </connections>
                             </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ImageThree" translatesAutoresizingMaskIntoConstraints="NO" id="lu0-zQ-Cz6">
+                                <rect key="frame" x="67" y="39" width="240" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdZ-Wm-u25">
+                                <rect key="frame" x="150" y="553" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play/Pause"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="K8k-Vy-qhq"/>
@@ -141,6 +146,7 @@
                         <outlet property="buttonOneOutput" destination="LBd-xE-4FK" id="WHq-Z3-ogx"/>
                         <outlet property="buttonTwoOutput" destination="Cv3-Jr-l3o" id="zZx-08-fId"/>
                         <outlet property="imageOutput" destination="lu0-zQ-Cz6" id="FfC-1a-Xkt"/>
+                        <outlet property="playPauseOutput" destination="WdZ-Wm-u25" id="Xpu-MI-5AX"/>
                         <outlet property="sliderOutput" destination="i06-on-gfy" id="DMu-Gz-Peb"/>
                     </connections>
                 </viewController>
