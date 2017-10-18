@@ -96,16 +96,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fti-9R-7hb">
-                                <rect key="frame" x="116" y="427" width="113" height="30"/>
+                                <rect key="frame" x="34" y="609" width="113" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Screens"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="hU9-bz-4wu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv3-Jr-l3o">
+                                <rect key="frame" x="148" y="455" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button Two"/>
+                                <connections>
+                                    <action selector="ButtonTwoAction:" destination="dUc-Gu-k6O" eventType="touchUpInside" id="nDU-2y-Ejj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-xE-4FK">
+                                <rect key="frame" x="149" y="417" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button one"/>
+                                <connections>
+                                    <action selector="ButtonOneAction:" destination="dUc-Gu-k6O" eventType="touchUpInside" id="9yc-dj-XAL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lu0-zQ-Cz6">
+                                <rect key="frame" x="67" y="168" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="i06-on-gfy">
+                                <rect key="frame" x="128" y="501" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="SliderAction:" destination="dUc-Gu-k6O" eventType="valueChanged" id="Sed-oO-FNK"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="K8k-Vy-qhq"/>
+                        <connections>
+                            <outlet property="buttonOneOutput" destination="LBd-xE-4FK" id="yYL-V3-6aV"/>
+                            <outlet property="buttonTwoOutput" destination="Cv3-Jr-l3o" id="y8X-3m-WgQ"/>
+                            <outlet property="imageOutput" destination="lu0-zQ-Cz6" id="JVn-hg-YQ8"/>
+                            <outlet property="sliderOutput" destination="i06-on-gfy" id="1O0-gB-WQP"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mv9-IB-drT" userLabel="First Responder" sceneMemberID="firstResponder"/>
