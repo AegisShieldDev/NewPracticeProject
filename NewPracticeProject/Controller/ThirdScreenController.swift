@@ -54,9 +54,7 @@ public class ThirdScreenController : UIViewController
         
         imageCounter -= 1
     }
-    @IBAction func SliderAction(_ sender: Any)
-    {
-    }
+    
     private func changeImage() -> Void
     {
         if(imageCounter > 2)
@@ -78,6 +76,30 @@ public class ThirdScreenController : UIViewController
         
         imageCounter += 1
     }
+    @IBAction func playPauseAction() -> Void
+    {
+        playMusicFile()
+        view.backgroundColor = color.createRandomColor()
+    }
+    @IBAction func SliderAction(_ sender: Any)
+    {
+        let seekTime = Double (sliderOutput.value)
+        soundPlayer?.currentTime = seekTime
+    }
+    private func playMusicFile() -> Void
+    {
+        if let isPlaying = soundPlayer?.isPlaying
+        {
+            if(isPlaying)
+            {
+                soundPlayer?.pause()
+            }
+            else
+            {
+               soundPlayer?.play()
+            }
+        }
+    }
     private func loadAudioFile() -> Void
     {
         if let soundURL = NSDataAsset(name: "Quinn")
@@ -89,11 +111,20 @@ public class ThirdScreenController : UIViewController
                 
                 try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
                 sliderOutput.maximumValue = Float ((soundPlayer?.duration)!)
-                //Timer.scheduledTimer(withTimeInterval: TimeInterval: 0.2, target: self, selector:
-                    //(#selector(self.updateSlider)), userInfo: nil, repeats: true)
+                Timer.scheduledTimer(timeInterval: 0.2, target: self, selector:
+                    (#selector(self.updateSlider)), userInfo: nil, repeats: true)
                 
             }
+            catch
+            {
+                print("Audio File Load Error")
+            }
         }
+    }
+    
+    @objc private func updateSlider() -> Void
+    {
+        sliderOutput.value = Float ((soundPlayer?.currentTime)!)
     }
 
 }
